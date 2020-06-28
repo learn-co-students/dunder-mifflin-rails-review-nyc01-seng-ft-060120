@@ -1,0 +1,11 @@
+<% @dogs.each do |dog| %>
+<ul> <p> <li> <%= link_to dog.name, dog_path(dog) %> </li></p> </ul>
+<%= dog.employees.count %>
+<%end%> 
+
+
+<%= form_with(url: "/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
