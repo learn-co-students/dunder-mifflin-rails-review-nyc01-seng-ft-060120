@@ -3,3 +3,7 @@
 <h3>Title: <%= @employee.title %></h3>
 <h3>Office: <%= @employee.office %></h3>
 <img src="<%= @employee.img_url %>" alt="profile pic" width="500" height="500">
+
+<br><%= link_to "Edit this Employee", edit_employee_path(@employee) %>
+
+<br><%= link_to "All Employees", employees_path %>
