@@ -1,0 +1,9 @@
+<h1> Who's a good doggo!? </h1>
+
+<p> Name: <%= @dog.name %></p>
+<p> Breed: <%= @dog.breed%></p>
+<p>Age: <%= @dog.age %></p>
+<p>Employee:</p>
+<% @dog.employees.each do |employee| %>
+<p><%= link_to employee.first_name, employee_path(employee) %>
+<% end %>
