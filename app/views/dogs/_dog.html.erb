@@ -1,0 +1,17 @@
+
+<li style="list-style-type:none">
+  <strong>Name:</strong>
+    <%= link_to dog.name, dog_path(dog) %></li>
+<li style="list-style-type:none"><strong>Breed: </strong><%= dog.breed %></li>
+<li style="list-style-type:none"><strong>Age:</strong> <%= dog.age %></li>
+
+
+<strong>Owners</strong>
+<ul>
+<% dog.employees.each do |e|%>
+  <li style="list-style-type:none"><%= link_to e.name, employee_path(e) %></li>
+  <% end %><br><br>
+</ul>
+
+
+
