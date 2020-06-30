@@ -1,0 +1,13 @@
+<h1><%=@employee.first_name%></h1>
+<h1><%=@employee.last_name%></h1>
+
+<ul>
+<li><%=@employee.alias%></li>
+<li><%=@employee.title%></li>
+<li><%=@employee.office%></li>
+<%Dog.all.select do |dog|%>
+<%if dog.id == @employee.dog_id%>
+<li>Dog: <%=dog.name%></li>
+<%end%>
+<%end%>
+</ul>
