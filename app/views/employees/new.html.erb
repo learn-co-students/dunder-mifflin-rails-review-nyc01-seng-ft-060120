@@ -1,0 +1,18 @@
+<h1>Add an Employee</h1>
+
+<%= form_for(@employee) do |f|%>
+<label>First Name:</label><br>
+<%= f.text_field :first_name%><br>
+<label>Last Name:</label><br>
+<%= f.text_field :last_name%><br>
+<label>Alias:</label><br>
+<%= f.text_field :alias%><br>
+<label>Title:</label><br>
+<%= f.text_field :title%><br>
+<label>Office:</label><br>
+<%= f.text_field :office%><br>
+<%= f.collection_select :dog_id, Dog.all, :id, :name %>
+<%= f.submit%><br>
+<% end %>
+
+
