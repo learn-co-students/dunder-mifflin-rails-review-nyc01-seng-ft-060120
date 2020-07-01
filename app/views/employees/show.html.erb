@@ -1,0 +1,6 @@
+<h1><%= @employee.to_s %></h1>
+<img style= "width:300px;height:auto" src= <%= @employee.img_url %> alt="employee's face" align="left">
+<h2>Alias: <%= @employee.alias %></h2>
+<h2>Title: <%= @employee.title %></h2>
+<p>Office: <%= @employee.office %></p>
+<p>Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></p>
