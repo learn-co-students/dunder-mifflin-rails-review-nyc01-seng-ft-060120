@@ -1,0 +1,23 @@
+<h1>New Employee Form</h1>
+
+<%= form_for @employee do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    
+    <%= f.label :title %>
+    <%= f.text_field :title%>
+
+    <%= f.label :office %>
+    <%= f.text_field :office%>
+
+    <%= f.label :dog_id %>
+    <!-- > :user_id is the method, @users is the array of all names, :id is the value that will be sent back, and :name is what the user sees </!--> 
+    <!-- :user_id is creating the key that we get sent back; :user_id is an attribute of favorite></!-->
+    <!-- >favorite: {:comment, :rating, :user_id, :drink_id}</!-->
+    <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+
+    <%= f.submit %>
+<% end %>
